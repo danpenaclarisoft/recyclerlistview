@@ -88,6 +88,8 @@ export default class VirtualRenderer {
 
     public updateOffset(offsetX: number, offsetY: number, correction: number, isActual: boolean): void {
         if (this._viewabilityTracker) {
+            // tslint:disable-next-line:no-console
+            console.log("reverseInfinite", "updateOffset");
             const offset = this._params && this._params.isHorizontal ? offsetX : offsetY;
             if (!this._isViewTrackerRunning) {
                 if (isActual) {
